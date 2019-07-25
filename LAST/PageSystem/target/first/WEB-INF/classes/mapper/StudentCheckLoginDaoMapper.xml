@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.StudentCheckLoginDao">
+    <!--学生登录校验-->
+    <select id="StudentCheckLogin" parameterType="String" resultType="com.pojo.Student">
+        select * from information_student where information_student.idstudent = #{arg0} and information_student.pwdstudent = #{arg1};
+    </select>
+</mapper>
